@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "t5-translate"
+version = "0.1.0"
+description = ""
+authors = ["kobfolson <kobbyfolson@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.79.0"
+transformers = "^4.21.1"
+uvicorn = "^0.18.2"
+torch = {version = "^1.12.1", source = "pytorch-cpu"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+mypy = "^0.971"
+flake8 = "^5.0.4"
+black = "^22.6.0"
+isort = "^5.10.1"
+
+[[tool.poetry.source]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+secondary = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
